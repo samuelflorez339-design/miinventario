@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h1>Calculadora de Tangente</h1>
+        <label for="angulo">Ingrese el ángulo en grados:</label>
+        <input type="number" id="angulo" />
+        <button onclick="calcularTangente()">Calcular Tangente</button>
+        <p id="resultado"></p>
+    <head>
+        <title> mi tangente</title>
+        <script type="text/javascript">
+            function calcularTangente() {
+                var anguloGrados = parseFloat(document.getElementById("angulo").value);
+                var anguloRadianes = anguloGrados * (Math.PI / 180);
+                var tangente = Math.tan(anguloRadianes);
+                document.getElementById("resultado").innerText = "La tangente de " + anguloGrados + " grados es: " + tangente;
+            }
+        </script>
+    </head>
+    </body>
+</html>
